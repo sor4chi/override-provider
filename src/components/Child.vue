@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { inject } from "vue";
-import { breakPointKey } from "../hooks/use-breakpoint";
+import { textKey } from "../hooks/use-text";
 
-const injected = inject(breakPointKey);
+const injected = inject(textKey);
 if (!injected) {
   throw new Error("No breakpoint provider found");
 }
 </script>
 
 <template>
-  {{ injected.bp }}
+  {{ injected.text }}
 </template>
